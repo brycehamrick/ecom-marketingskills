@@ -46,6 +46,12 @@ ecom-marketingskills/
 - `name` is 1-64 chars, lowercase alphanumeric and hyphens only
 - `description` is 1-1024 characters
 
+**Skill routing** — the `description` field is the only signal an agent uses to pick a skill:
+```bash
+node .github/scripts/check-routing.js --verbose
+```
+Scores every description against the fixtures in `ROUTING.md`. A miss means a description omits vocabulary operators actually type. It is a bag-of-words proxy — a real agent matches semantically, so do not tune descriptions to reach 100%.
+
 **CLI tools** (`tools/clis/*.js`) are zero-dependency Node.js scripts (Node 18+). Verify with:
 ```bash
 node --check tools/clis/<name>.js   # Syntax check

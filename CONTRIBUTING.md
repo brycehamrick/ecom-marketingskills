@@ -90,7 +90,10 @@ Skills must stay portable across agents. No `` !`command` `` injection in `SKILL
 ./validate-skills.sh                              # name/dir match, description length, line count
 ./validate-skills-official.sh                     # upstream agentskills reference validator
 node .github/scripts/sync-skills.js && git diff    # README table + skill count
+node .github/scripts/check-routing.js --verbose    # does your description actually trigger?
 ```
+
+`check-routing.js` scores every description against the fixtures in `ROUTING.md`. A miss means your description is missing vocabulary real operators use. It is a lexical proxy, not a live agent — do not tune to 100%, and read the note at the bottom of `ROUTING.md` before changing descriptions to satisfy it.
 
 ## Checklist
 
@@ -104,6 +107,7 @@ node .github/scripts/sync-skills.js && git diff    # README table + skill count
 - [ ] No Claude-Code-only syntax
 - [ ] No sensitive data or credentials
 - [ ] `validate-skills.sh` passes
+- [ ] `check-routing.js` passes, and any new skill has a row in both `ROUTING.md` fixtures
 
 ## Submitting
 

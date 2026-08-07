@@ -1,8 +1,8 @@
 ---
 name: post-purchase-experience
-description: "When the user wants to improve what happens between purchase and the second order — shipping communication, tracking, unboxing, inserts, and returns. Also use when the user mentions 'post purchase,' 'shipping notifications,' 'tracking page,' 'WISMO,' 'where is my order,' 'delivery experience,' 'unboxing,' 'packaging insert,' 'thank you card,' 'returns,' 'return rate,' 'our returns are killing us,' 'exchanges,' 'refunds,' 'return policy,' or 'customers complain about shipping.' For the emails and SMS that execute this, see lifecycle-flows. For the checkout itself, see cart-and-checkout. For loyalty and repeat-purchase strategy, see retention-and-loyalty."
+description: "When the user wants to improve what happens between purchase and the second order — shipping communication, tracking, unboxing, inserts, and returns. Also use when the user mentions 'post purchase,' 'shipping notifications,' 'tracking page,' 'WISMO,' 'where is my order,' 'delivery experience,' 'unboxing,' 'packaging insert,' 'thank you card,' 'returns,' 'return rate,' 'our returns are killing us,' 'exchanges,' 'refunds,' 'return policy,', 'customers complain about shipping,', 'too many returns,', 'orders coming back,', 'refunds,', 'exchanges,', or 'delivery experience is bad.' For the emails and SMS that execute this, see lifecycle-flows. For the checkout itself, see cart-and-checkout. For loyalty and repeat-purchase strategy, see retention-and-loyalty."
 metadata:
-  version: 1.0.0
+  version: 1.1.0
 ---
 
 # Post-Purchase Experience

@@ -1,8 +1,8 @@
 ---
 name: experimentation
-description: "When the user wants to design, run, or interpret an ecommerce test. Also use when the user mentions 'A/B test,' 'split test,' 'experiment,' 'test this,' 'which version is better,' 'statistical significance,' 'sample size,' 'how long should I run this test,' 'holdout,' 'geo test,' 'incrementality test,' 'testing roadmap,' or 'is this result real.' For measuring true channel incrementality and profitability, see profitability-and-incrementality. For tracking setup, see measurement-and-analytics."
+description: "When the user wants to design, run, or interpret an ecommerce test. Also use when the user mentions 'A/B test,' 'split test,' 'experiment,' 'test this,' 'which version is better,' 'statistical significance,' 'sample size,' 'how long should I run this test,' 'holdout,' 'geo test,' 'incrementality test,' 'testing roadmap,', 'is this result real,', 'version A or version B,', 'is this result real,', or 'which one performs better.' For measuring true channel incrementality and profitability, see profitability-and-incrementality. For tracking setup, see measurement-and-analytics."
 metadata:
-  version: 1.0.0
+  version: 1.1.0
 ---
 
 # Experimentation

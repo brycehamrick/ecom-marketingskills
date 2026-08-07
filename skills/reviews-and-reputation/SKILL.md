@@ -1,8 +1,8 @@
 ---
 name: reviews-and-reputation
-description: "When the user wants more reviews, better review display, or help managing ratings and reputation. Also use when the user mentions 'reviews,' 'get more reviews,' 'review requests,' 'star rating,' 'UGC,' 'user generated content,' 'photo reviews,' 'video reviews,' 'review widget,' 'Yotpo,' 'Okendo,' 'Judge.me,' 'Trustpilot,' 'respond to reviews,' 'bad review,' 'negative reviews,' 'our rating dropped,' 'review syndication,' or 'Q&A on product pages.' This skill owns collecting, displaying, syndicating, and responding to reviews. For mining reviews to find messaging and objections, see customer-research. For creator content and paid UGC, see creators-and-affiliates."
+description: "When the user wants more reviews, better review display, or help managing ratings and reputation. Also use when the user mentions 'reviews,' 'get more reviews,' 'more reviews on our PDPs,' 'reviews on product pages,' 'nobody leaves a rating,' 'review requests,' 'star rating,' 'UGC,' 'user generated content,' 'photo reviews,' 'video reviews,' 'review widget,' 'Yotpo,' 'Okendo,' 'Judge.me,' 'Trustpilot,' 'respond to reviews,' 'bad review,' 'negative reviews,' 'our rating dropped,' 'review syndication,' or 'Q&A on product pages.' This skill owns collecting, displaying, syndicating, and responding to reviews. For mining reviews to find messaging and objections, see customer-research. For creator content and paid UGC, see creators-and-affiliates."
 metadata:
-  version: 1.0.0
+  version: 1.1.0
 ---
 
 # Reviews and Reputation

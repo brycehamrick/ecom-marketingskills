@@ -1,8 +1,8 @@
 ---
 name: product-launch
-description: "When the user wants to launch a new product, collection, or drop. Also use when the user mentions 'launch,' 'launch plan,' 'new product launch,' 'product drop,' 'drop,' 'pre-order,' 'waitlist,' 'early access,' 'restock,' 'sell-through,' 'go-to-market,' 'we're launching,' 'seeding,' or 'how do I launch this product.' This skill owns launching a specific SKU or collection. For calendar-anchored seasonal moments and promo cadence, see bfcm-and-peak-season. For annual budget and channel mix, see growth-plan. For the product page itself, see product-pages."
+description: "When the user wants to launch a new product, collection, or drop. Also use when the user mentions 'launch,' 'launch plan,' 'new product launch,' 'product drop,' 'drop,' 'pre-order,' 'waitlist,' 'early access,' 'restock,' 'sell-through,' 'go-to-market,' 'we're launching,' 'seeding,', 'how do I launch this product,', 'new flavor,', 'new variant,', 'new SKU,', or 'releasing something new.' This skill owns launching a specific SKU or collection. For calendar-anchored seasonal moments and promo cadence, see bfcm-and-peak-season. For annual budget and channel mix, see growth-plan. For the product page itself, see product-pages."
 metadata:
-  version: 1.0.0
+  version: 1.1.0
 ---
 
 # Product Launch

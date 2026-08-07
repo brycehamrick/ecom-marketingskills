@@ -1,8 +1,8 @@
 ---
 name: ad-creative
-description: "When the user wants ad concepts, hooks, scripts, or copy for ecommerce advertising. Also use when the user mentions 'ad copy,' 'ad creative,' 'write me some ads,' 'hooks,' 'give me 10 hooks,' 'ad angles,' 'UGC script,' 'creator brief,' 'video ad script,' 'static ad,' 'thumb stopper,' 'creative testing,' 'creative refresh,' 'our ads are fatigued,' 'iterate on this winning ad,' 'headlines,' or 'primary text.' This skill produces the creative. For campaign structure, budgets, bidding, audiences, and scaling, see paid-social. For Google Shopping and PMax, see google-ads. For claims, disclosures, and channel policy, see claims-and-compliance."
+description: "When the user wants ad concepts, hooks, scripts, or copy for ecommerce advertising. Also use when the user mentions 'ad copy,' 'ad creative,' 'write me some ads,' 'hooks,' 'give me 10 hooks,' 'ad angles,' 'UGC script,' 'creator brief,' 'video ad script,' 'reels ads,' 'video ads,' 'ad video ideas,' 'static ad,' 'thumb stopper,' 'creative testing,' 'creative refresh,' 'our ads are fatigued,' 'iterate on this winning ad,' 'headlines,' or 'primary text.' This skill produces the creative. For campaign structure, budgets, bidding, audiences, and scaling, see paid-social. For Google Shopping and PMax, see google-ads. For claims, disclosures, and channel policy, see claims-and-compliance."
 metadata:
-  version: 1.0.0
+  version: 1.1.0
 ---
 
 # Ad Creative

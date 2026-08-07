@@ -1,8 +1,8 @@
 ---
 name: subscriptions-and-replenishment
-description: "When the user wants to launch, grow, or fix a subscription or replenishment program. Also use when the user mentions 'subscription,' 'subscribe and save,' 'recurring,' 'auto-ship,' 'replenishment,' 'subscription churn,' 'people keep cancelling their subscription,' 'cancel flow,' 'save offer,' 'skip,' 'pause,' 'dunning,' 'failed payment,' 'involuntary churn,' 'Recharge,' 'Skio,' 'Stay AI,' or 'should I offer a subscription.' For loyalty programs and general repeat-purchase strategy, see retention-and-loyalty. For the emails that run the program, see lifecycle-flows. For subscription disclosure and cancellation law, see claims-and-compliance."
+description: "When the user wants to launch, grow, or fix a subscription or replenishment program. Also use when the user mentions 'subscription,' 'subscribe and save,' 'recurring,' 'auto-ship,' 'replenishment,' 'subscription churn,' 'people keep cancelling their subscription,' 'cancel flow,' 'save offer,' 'skip,' 'pause,' 'dunning,' 'failed payment,' 'involuntary churn,' 'Recharge,' 'Skio,' 'Stay AI,', 'should I offer a subscription,', 'subscribers quitting,', 'subscription cancellations,', or 'people cancel after a few boxes.' For loyalty programs and general repeat-purchase strategy, see retention-and-loyalty. For the emails that run the program, see lifecycle-flows. For subscription disclosure and cancellation law, see claims-and-compliance."
 metadata:
-  version: 1.0.0
+  version: 1.1.0
 ---
 
 # Subscriptions and Replenishment

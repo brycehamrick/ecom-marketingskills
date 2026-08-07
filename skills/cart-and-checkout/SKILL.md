@@ -1,8 +1,8 @@
 ---
 name: cart-and-checkout
-description: "When the user wants to reduce cart or checkout abandonment and increase completion rate. Also use when the user mentions 'cart,' 'cart drawer,' 'mini cart,' 'checkout,' 'checkout abandonment,' 'cart abandonment,' 'people abandon at checkout,' 'shipping cost surprise,' 'express checkout,' 'Shop Pay,' 'Apple Pay,' 'guest checkout,' 'payment methods,' 'BNPL,' 'Klarna,' 'Afterpay,' 'one page checkout,' or 'they add to cart but don't buy.' For the threshold and margin decision itself, see promotions-and-discounting. For the emails that recover abandoners, see lifecycle-flows. For the product page, see product-pages."
+description: "When the user wants to reduce cart or checkout abandonment and increase completion rate. Also use when the user mentions 'cart,' 'cart drawer,' 'mini cart,' 'checkout,' 'checkout abandonment,' 'cart abandonment,' 'people abandon at checkout,' 'shipping cost surprise,' 'delivery charge,' 'shipping cost at checkout,' 'unexpected fees,' 'express checkout,' 'Shop Pay,' 'Apple Pay,' 'guest checkout,' 'payment methods,' 'BNPL,' 'Klarna,' 'Afterpay,' 'one page checkout,' or 'they add to cart but don't buy.' For the threshold and margin decision itself, see promotions-and-discounting. For the emails that recover abandoners, see lifecycle-flows. For the product page, see product-pages."
 metadata:
-  version: 1.0.0
+  version: 1.1.0
 ---
 
 # Cart and Checkout

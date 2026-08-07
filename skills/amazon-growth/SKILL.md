@@ -1,8 +1,8 @@
 ---
 name: amazon-growth
-description: "When the user wants to grow sales on Amazon — listings, keywords, content, reviews, Buy Box, account health, or FBA economics. Also use when the user mentions 'Amazon,' 'Amazon listing,' 'ASIN,' 'A9,' 'A10,' 'backend keywords,' 'A+ content,' 'Premium A+,' 'Brand Registry,' 'Amazon Storefront,' 'Vine,' 'Buy Box,' 'listing suppressed,' 'my Amazon listing got suppressed,' 'account health,' 'FBA fees,' 'Best Seller Rank,' 'BSR,' 'Amazon reviews,' 'hijacker,' or 'Seller Central.' This skill owns everything Amazon that is not an ad buy. For Amazon Sponsored Products, ACOS, and TACoS, see marketplace-ads. For Walmart, Etsy, TikTok Shop, and eBay, see marketplace-listings. For claims and restricted language, see claims-and-compliance."
+description: "When the user wants to grow sales on Amazon — listings, keywords, content, reviews, Buy Box, account health, or FBA economics. Also use when the user mentions 'Amazon listing,' 'Amazon SEO,' 'grow on Amazon,' 'ASIN,' 'A9,' 'A10,' 'backend keywords,' 'A+ content,' 'Premium A+,' 'Brand Registry,' 'Amazon Storefront,' 'Vine,' 'Buy Box,' 'listing suppressed,' 'my Amazon listing got suppressed,' 'Amazon took our listing down,' 'Amazon pulled our page,' 'account health,' 'FBA fees,' 'Best Seller Rank,' 'BSR,' 'Amazon reviews,' 'hijacker,' or 'Seller Central.' This skill owns everything Amazon that is not an ad buy. For anything about Amazon ad spend, ad costs, bids, Sponsored Products, ACOS, or TACoS, see marketplace-ads. For Walmart, Etsy, TikTok Shop, and eBay, see marketplace-listings. For claims and restricted language, see claims-and-compliance."
 metadata:
-  version: 1.0.0
+  version: 1.1.0
 ---
 
 # Amazon Growth

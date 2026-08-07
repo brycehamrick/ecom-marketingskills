@@ -1,8 +1,8 @@
 ---
 name: catalog-and-feeds
-description: "When the user wants to fix product data, titles, attributes, or shopping feeds. Also use when the user mentions 'product feed,' 'shopping feed,' 'Merchant Center,' 'Google Merchant Center,' 'feed errors,' 'disapproved products,' 'my Google Shopping feed has disapprovals,' 'GTIN,' 'product titles,' 'product attributes,' 'catalog,' 'Meta catalog,' 'feed rules,' 'supplemental feed,' 'product taxonomy,' 'variants not showing,' or 'products not showing in Shopping.' This skill owns product data quality and feed syndication to every destination. For campaign structure and bidding, see google-ads and paid-social. For what appears on collection pages, see collection-merchandising."
+description: "When the user wants to fix product data, titles, attributes, or shopping feeds. Also use when the user mentions 'product feed,' 'shopping feed,' 'Merchant Center,' 'Google Merchant Center,' 'feed errors,' 'disapproved products,' 'my Google Shopping feed has disapprovals,' 'GTIN,' 'product titles,' 'product attributes,' 'catalog,' 'Meta catalog,' 'feed rules,' 'supplemental feed,' 'product taxonomy,' 'variants not showing,' 'products not showing in Shopping,' 'products not showing in Google,' 'missing from Shopping,' or 'items not appearing in ads.' This skill owns product data quality and feed syndication to every destination. For campaign structure and bidding, see google-ads and paid-social. For what appears on collection pages, see collection-merchandising."
 metadata:
-  version: 1.0.0
+  version: 1.1.0
 ---
 
 # Catalog and Feeds

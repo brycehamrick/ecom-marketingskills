@@ -1,8 +1,8 @@
 ---
 name: category-intel
-description: "When the user wants to research competitors or map their ecommerce category — catalogs, price ladders, ad angles, positioning, and share of shelf. Also use when the user mentions 'competitor research,' 'competitive analysis,' 'competitor teardown,' 'who are my competitors,' 'what are they doing,' 'their ads,' 'ad library,' 'how do we compare,' 'category landscape,' 'market map,' 'positioning map,' 'price comparison,' 'share of shelf,' 'they're outranking us,' or 'benchmark us against the category.' Input is competitor URLs or an Amazon category. For mining your own customers' language, see customer-research. For building comparison pages, see ecommerce-seo."
+description: "When the user wants to research competitors or map their ecommerce category — catalogs, price ladders, ad angles, positioning, and share of shelf. Also use when the user mentions 'competitor research,' 'competitive analysis,' 'competitor teardown,' 'who are my competitors,' 'what are they doing,' 'their ads,' 'ad library,' 'how do we compare,' 'category landscape,' 'market map,' 'positioning map,' 'price comparison,' 'share of shelf,' 'they're outranking us,' 'benchmark us against the category,' 'competitor pricing,' 'what do competitors charge,' or 'who else sells this.' Input is competitor URLs or an Amazon category. For mining your own customers' language, see customer-research. For building comparison pages, see ecommerce-seo."
 metadata:
-  version: 1.0.0
+  version: 1.1.0
 ---
 
 # Category Intelligence

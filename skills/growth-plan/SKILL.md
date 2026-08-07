@@ -1,8 +1,8 @@
 ---
 name: growth-plan
-description: "When the user wants an ecommerce marketing plan, budget allocation, or growth forecast. Also use when the user mentions 'marketing plan,' 'growth plan,' 'annual plan,' 'quarterly plan,' 'budget,' 'where do we cut spend next quarter,' 'budget allocation,' 'channel mix,' 'forecast,' 'growth model,' 'roadmap,' 'should we add a channel,' 'should we go wholesale,' 'expand to a new marketplace,' or 'how do we hit our number.' This skill owns planning, budget, and channel go/no-go decisions. For a diagnostic sweep of what is broken, see growth-audit. For seasonal calendars, see bfcm-and-peak-season."
+description: "When the user wants an ecommerce marketing plan, budget allocation, or growth forecast. Also use when the user mentions 'marketing plan,' 'growth plan,' 'annual plan,' 'quarterly plan,' 'budget,' 'where do we cut spend next quarter,' 'budget allocation,' 'channel mix,' 'forecast,' 'growth model,' 'roadmap,' 'should we add a channel,' 'should we go wholesale,' 'expand to a new marketplace,', 'how do we hit our number,', 'where should the budget go,', 'next quarter,', or 'plan for next year.' This skill owns planning, budget, and channel go/no-go decisions. For a diagnostic sweep of what is broken, see growth-audit. For seasonal calendars, see bfcm-and-peak-season."
 metadata:
-  version: 1.0.0
+  version: 1.1.0
 ---
 
 # Growth Plan

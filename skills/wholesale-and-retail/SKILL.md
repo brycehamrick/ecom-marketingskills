@@ -1,8 +1,8 @@
 ---
 name: wholesale-and-retail
-description: "When the user wants to sell through retailers, distributors, or wholesale marketplaces. Also use when the user mentions 'wholesale,' 'line sheet,' 'retail buyer,' 'retailer pitch,' 'Faire,' 'Brandboom,' 'RangeMe,' 'get into stores,' 'get into Target,' 'trade show,' 'MAP policy,' 'minimum advertised price,' 'co-op,' 'trade funds,' 'sell-through,' 'shelf,' 'distributor,' 'B2B ordering,' 'stockist,' or 'brick and mortar.' This skill owns the wholesale and retail channel — pitching, terms, trade marketing, and sell-through. For pricing and margin architecture, see pricing-strategy. For retail media tied to a retailer relationship, see marketplace-ads."
+description: "When the user wants to sell through retailers, distributors, or wholesale marketplaces. Also use when the user mentions 'wholesale,' 'line sheet,' 'retail buyer,' 'retailer pitch,' 'Faire,' 'Brandboom,' 'RangeMe,' 'get into stores,' 'get into Target,' 'trade show,' 'MAP policy,' 'minimum advertised price,' 'co-op,' 'trade funds,' 'sell-through,' 'shelf,' 'distributor,' 'B2B ordering,' 'stockist,', 'brick and mortar,', 'price list for retailers,', 'stockists,', 'boutiques,', 'retailers asking for pricing,', or 'get into stores.' This skill owns the wholesale and retail channel — pitching, terms, trade marketing, and sell-through. For pricing and margin architecture, see pricing-strategy. For retail media tied to a retailer relationship, see marketplace-ads."
 metadata:
-  version: 1.0.0
+  version: 1.1.0
 ---
 
 # Wholesale and Retail

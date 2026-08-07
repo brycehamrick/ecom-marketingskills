@@ -1,8 +1,8 @@
 ---
 name: bundles-and-aov
-description: "When the user wants to raise average order value through bundles, kits, multi-packs, or upsells. Also use when the user mentions 'AOV,' 'average order value,' 'raise AOV,' 'bundle,' 'kit,' 'multipack,' 'variety pack,' 'volume discount,' 'buy 2 get 1,' 'gift with purchase,' 'GWP,' 'upsell,' 'cross-sell,' 'add-on,' 'post-purchase upsell,' 'one-click upsell,' 'frequently bought together,' or 'people only buy one item.' For discount depth and free-shipping thresholds, see promotions-and-discounting. For price architecture, see pricing-strategy. For where offers appear in the cart, see cart-and-checkout."
+description: "When the user wants to raise average order value through bundles, kits, multi-packs, or upsells. Also use when the user mentions 'AOV,' 'average order value,' 'raise AOV,' 'bundle,' 'kit,' 'multipack,' 'variety pack,' 'volume discount,' 'buy 2 get 1,' 'gift with purchase,' 'GWP,' 'upsell,' 'cross-sell,' 'add-on,' 'post-purchase upsell,' 'one-click upsell,' 'frequently bought together,', 'people only buy one item,', 'buy two,', 'multi-buy,', 'get people to buy more,', or 'sell more per order.' For discount depth and free-shipping thresholds, see promotions-and-discounting. For price architecture, see pricing-strategy. For where offers appear in the cart, see cart-and-checkout."
 metadata:
-  version: 1.0.0
+  version: 1.1.0
 ---
 
 # Bundles and AOV

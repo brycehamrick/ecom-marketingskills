@@ -1,8 +1,8 @@
 ---
 name: lifecycle-flows
-description: "When the user wants to build or improve automated, triggered email and SMS flows. Also use when the user mentions 'flow,' 'automation,' 'welcome series,' 'abandoned cart,' 'cart abandonment email,' 'browse abandonment,' 'checkout abandonment,' 'post-purchase flow,' 'back in stock,' 'replenishment,' 'winback,' 'VIP flow,' 'sunset flow,' 'Klaviyo flows,' 'automated emails,' or 'what emails should I have set up.' lifecycle-flows owns automated triggered flows that run continuously; email-sms-campaigns owns one-time scheduled sends and the campaign calendar. For popups and list capture, see list-growth. For loyalty and subscription program design, see retention-and-loyalty and subscriptions-and-replenishment. For claims, disclosures, and channel policy, see claims-and-compliance."
+description: "When the user wants to build or improve automated, triggered email and SMS flows. Also use when the user mentions 'flow,' 'automation,' 'welcome series,' 'abandoned cart,' 'cart abandonment email,' 'browse abandonment,' 'checkout abandonment,' 'post-purchase flow,' 'back in stock,' 'replenishment,' 'winback,' 'VIP flow,' 'sunset flow,' 'Klaviyo flows,' 'automated emails,' 'what emails should I have set up,' 'SMS flow,' 'automated texts,' 'text message automation,' or 'we collect emails but never send anything.' lifecycle-flows owns automated triggered flows that run continuously; email-sms-campaigns owns one-time scheduled sends and the campaign calendar. For popups and list capture, see list-growth. For loyalty and subscription program design, see retention-and-loyalty and subscriptions-and-replenishment. For claims, disclosures, and channel policy, see claims-and-compliance."
 metadata:
-  version: 1.0.0
+  version: 1.1.0
 ---
 
 # Lifecycle Flows

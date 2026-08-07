@@ -1,8 +1,8 @@
 ---
 name: site-cro
-description: "When the user wants to improve sitewide ecommerce conversion outside of the product page and checkout — homepage, navigation, site search, mobile experience, speed, and trust. Also use when the user mentions 'CRO,' 'conversion rate optimization,' 'sitewide conversion,' 'homepage,' 'navigation,' 'site search,' 'mobile experience,' 'site speed,' 'page speed,' 'trust signals,' 'bounce rate,' 'people land and leave,' or 'our conversion rate is low.' For product detail page conversion specifically, see product-pages. For collection and category pages, see collection-merchandising. For cart and checkout, see cart-and-checkout. For popups and email capture, see list-growth."
+description: "When the user wants to improve sitewide ecommerce conversion outside of the product page and checkout — homepage, navigation, site search, mobile experience, speed, and trust. Also use when the user mentions 'CRO,' 'conversion rate optimization,' 'sitewide conversion,' 'homepage,' 'navigation,' 'site search,' 'mobile experience,' 'site speed,' 'page speed,' 'trust signals,' 'bounce rate,' 'people land and leave,', 'our conversion rate is low,', 'site is slow,', 'slow on mobile,', 'mobile site,', 'clunky,', 'hard to navigate,', or 'people land and leave.' For product detail page conversion specifically, see product-pages. For collection and category pages, see collection-merchandising. For cart and checkout, see cart-and-checkout. For popups and email capture, see list-growth."
 metadata:
-  version: 1.0.0
+  version: 1.1.0
 ---
 
 # Site CRO

@@ -1,8 +1,8 @@
 ---
 name: international-expansion
-description: "When the user wants to sell into another country or improve an existing international market. Also use when the user mentions 'international,' 'expand to the UK,' 'sell in Europe,' 'EU,' 'Canada,' 'Australia,' 'cross-border,' 'Shopify Markets,' 'duties,' 'DDP,' 'customs,' 'currency,' 'localization,' 'translation,' 'hreflang,' 'VAT,' 'IOSS,' 'GPSR,' 'EPR,' 'GDPR,' or 'international shipping.' This skill owns entering and running non-domestic markets. For domestic wholesale and retail, see wholesale-and-retail. For the go/no-go decision, see growth-plan."
+description: "When the user wants to sell into another country or improve an existing international market. Also use when the user mentions 'international,' 'expand to the UK,' 'sell in Europe,' 'EU,' 'Canada,' 'Australia,' 'cross-border,' 'Shopify Markets,' 'duties,' 'DDP,' 'customs,' 'currency,' 'localization,' 'translation,' 'hreflang,' 'VAT,' 'IOSS,' 'GPSR,' 'EPR,' 'GDPR,', 'international shipping,', 'UK,', 'Britain,', 'Germany,', 'France,', 'sell abroad,', 'ship overseas,', 'overseas customers,', 'customers in another country,', or 'new market.' This skill owns entering and running non-domestic markets. For domestic wholesale and retail, see wholesale-and-retail. For the go/no-go decision, see growth-plan."
 metadata:
-  version: 1.0.0
+  version: 1.1.0
 ---
 
 # International Expansion

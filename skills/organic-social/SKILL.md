@@ -1,8 +1,8 @@
 ---
 name: organic-social
-description: "When the user wants to plan or improve organic social content for an ecommerce brand. Also use when the user mentions 'social media,' 'organic social,' 'TikTok,' 'Instagram,' 'Reels,' 'Pinterest,' 'YouTube Shorts,' 'short form video,' 'content calendar,' 'what should we post,' 'social strategy,' 'going viral,' 'social listening,' 'community,' or 'our social isn't working.' For paid social advertising, see paid-social. For ad creative, see ad-creative. For creator partnerships, see creators-and-affiliates. For claims and disclosures, see claims-and-compliance."
+description: "When the user wants to plan or improve organic social content for an ecommerce brand. Also use when the user mentions 'social media,' 'organic social,' 'TikTok,' 'Instagram,' 'Reels,' 'Pinterest,' 'YouTube Shorts,' 'short form video,' 'content calendar,' 'what should we post,' 'social strategy,' 'going viral,' 'social listening,' 'community,' 'our social isn't working,' 'posting but nothing happens,' or 'no engagement.' For paid social advertising, see paid-social. For ad creative, see ad-creative. For creator partnerships, see creators-and-affiliates. For claims and disclosures, see claims-and-compliance."
 metadata:
-  version: 1.0.0
+  version: 1.1.0
 ---
 
 # Organic Social

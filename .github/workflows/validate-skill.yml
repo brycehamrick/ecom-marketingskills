@@ -5,10 +5,12 @@ on:
     branches: [main]
     paths:
       - "**/SKILL.md"
+      - "ROUTING.md"
   pull_request:
     branches: [main]
     paths:
       - "**/SKILL.md"
+      - "ROUTING.md"
 
 concurrency:
   group: validate-skill-${{ github.ref }}
@@ -63,3 +65,15 @@ jobs:
         uses: Flash-Brew-Digital/validate-skill@v1
         with:
           path: ${{ matrix.skill }}
+
+  routing:
+    needs: detect-changes
+    runs-on: ubuntu-slim
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v6
+
+      # A description that omits the words operators actually type is a skill
+      # that never triggers. This catches that before it ships.
+      - name: Check skill routing
+        run: node .github/scripts/check-routing.js --verbose

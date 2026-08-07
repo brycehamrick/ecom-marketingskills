@@ -4,15 +4,15 @@ Current versions of all skills. Agents can compare against local versions to che
 
 | Skill | Version | Last Updated |
 |-------|---------|--------------|
-| ad-creative | 1.0.0 | 2026-08-07 |
+| ad-creative | 1.1.0 | 2026-08-07 |
 | ai-search-visibility | 1.0.0 | 2026-08-07 |
-| amazon-growth | 1.0.0 | 2026-08-07 |
+| amazon-growth | 1.1.0 | 2026-08-07 |
 | bfcm-and-peak-season | 1.0.0 | 2026-08-07 |
 | brand-context | 1.0.0 | 2026-08-07 |
-| bundles-and-aov | 1.0.0 | 2026-08-07 |
-| cart-and-checkout | 1.0.0 | 2026-08-07 |
-| catalog-and-feeds | 1.0.0 | 2026-08-07 |
-| category-intel | 1.0.0 | 2026-08-07 |
+| bundles-and-aov | 1.1.0 | 2026-08-07 |
+| cart-and-checkout | 1.1.0 | 2026-08-07 |
+| catalog-and-feeds | 1.1.0 | 2026-08-07 |
+| category-intel | 1.1.0 | 2026-08-07 |
 | claims-and-compliance | 1.0.0 | 2026-08-07 |
 | client-reporting | 1.0.0 | 2026-08-07 |
 | collection-merchandising | 1.0.0 | 2026-08-07 |
@@ -20,34 +20,51 @@ Current versions of all skills. Agents can compare against local versions to che
 | customer-research | 1.0.0 | 2026-08-07 |
 | earned-media | 1.0.0 | 2026-08-07 |
 | ecommerce-seo | 1.0.0 | 2026-08-07 |
-| email-sms-campaigns | 1.0.0 | 2026-08-07 |
-| experimentation | 1.0.0 | 2026-08-07 |
+| email-sms-campaigns | 1.1.0 | 2026-08-07 |
+| experimentation | 1.1.0 | 2026-08-07 |
 | google-ads | 1.0.0 | 2026-08-07 |
 | growth-audit | 1.0.0 | 2026-08-07 |
-| growth-plan | 1.0.0 | 2026-08-07 |
-| international-expansion | 1.0.0 | 2026-08-07 |
-| lifecycle-flows | 1.0.0 | 2026-08-07 |
+| growth-plan | 1.1.0 | 2026-08-07 |
+| international-expansion | 1.1.0 | 2026-08-07 |
+| lifecycle-flows | 1.1.0 | 2026-08-07 |
 | list-growth | 1.0.0 | 2026-08-07 |
-| marketplace-ads | 1.0.0 | 2026-08-07 |
+| marketplace-ads | 1.1.0 | 2026-08-07 |
 | marketplace-listings | 1.0.0 | 2026-08-07 |
 | measurement-and-analytics | 1.0.0 | 2026-08-07 |
-| organic-social | 1.0.0 | 2026-08-07 |
+| organic-social | 1.1.0 | 2026-08-07 |
 | paid-social | 1.0.0 | 2026-08-07 |
-| post-purchase-experience | 1.0.0 | 2026-08-07 |
+| post-purchase-experience | 1.1.0 | 2026-08-07 |
 | pricing-strategy | 1.0.0 | 2026-08-07 |
-| product-launch | 1.0.0 | 2026-08-07 |
-| product-pages | 1.0.0 | 2026-08-07 |
+| product-launch | 1.1.0 | 2026-08-07 |
+| product-pages | 1.1.0 | 2026-08-07 |
 | profitability-and-incrementality | 1.0.0 | 2026-08-07 |
 | promotions-and-discounting | 1.0.0 | 2026-08-07 |
 | retention-and-loyalty | 1.0.0 | 2026-08-07 |
-| reviews-and-reputation | 1.0.0 | 2026-08-07 |
-| site-cro | 1.0.0 | 2026-08-07 |
-| subscriptions-and-replenishment | 1.0.0 | 2026-08-07 |
-| wholesale-and-retail | 1.0.0 | 2026-08-07 |
+| reviews-and-reputation | 1.1.0 | 2026-08-07 |
+| site-cro | 1.1.0 | 2026-08-07 |
+| subscriptions-and-replenishment | 1.1.0 | 2026-08-07 |
+| wholesale-and-retail | 1.1.0 | 2026-08-07 |
 
 ---
 
 ## Recent Changes
+
+### 1.0.1 (2026-08-07)
+
+**Routing hardening.** Added `.github/scripts/check-routing.js`, a regression check that scores every skill description against the fixtures in `ROUTING.md`. The `description` field is the only signal an agent uses to pick a skill, so a description missing the words operators actually type is a skill that never triggers — this catches that before it ships.
+
+Added a **paraphrase fixture** to `ROUTING.md` (40 prompts phrased the way an operator would type them, deliberately avoiding every trigger phrase in the descriptions). The original fixture reused the trigger phrases and so mostly tested self-consistency; this one is the real test. Baseline was 55% correct routing, now 93%. The trigger-phrase fixture holds at 100%.
+
+Descriptions updated with missing operator vocabulary (20 skills, 1.0.0 → 1.1.0): `ad-creative`, `amazon-growth`, `bundles-and-aov`, `cart-and-checkout`, `catalog-and-feeds`, `category-intel`, `email-sms-campaigns`, `experimentation`, `growth-plan`, `international-expansion`, `lifecycle-flows`, `marketplace-ads`, `organic-social`, `post-purchase-experience`, `product-launch`, `product-pages`, `reviews-and-reputation`, `site-cro`, `subscriptions-and-replenishment`, `wholesale-and-retail`.
+
+Two genuine routing defects fixed:
+- **`amazon-growth` vs `marketplace-ads`** — a bare `'Amazon,'` trigger made `amazon-growth` win ad-spend prompts like "our Amazon ad costs are out of control." Narrowed the trigger and strengthened the negative pointer.
+- **`ad-creative` vs `organic-social`** — `organic-social` owned "Reels," so video-ad requests routed to organic. `ad-creative` now owns "reels ads," "video ads," "ad video ideas."
+
+Also: the routing check runs in CI on any `SKILL.md` or `ROUTING.md` change, and `sync-skills.yml` now commits as `github-actions[bot]` rather than the upstream fork's bot identity.
+
+**Note on the threshold:** the paraphrase suite passes at 80%, not 100%. The checker is a bag-of-words proxy and a real agent matches semantically. Some prompts ("our thing costs too little I think") carry no keyword signal at all and are unfixable by adding phrases. Tuning descriptions to satisfy the checker can make them worse in a live session.
+
 
 ### 1.0.0 (2026-08-07)
 

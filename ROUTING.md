@@ -190,3 +190,54 @@ Verify by issuing each prompt cold in a fresh session with the plugin installed,
 | 33 | "build a bundle to raise AOV" | `bundles-and-aov` |
 | 34 | "our returns rate is killing us" | `post-purchase-experience` |
 | 35 | "find creators to seed product to" | `creators-and-affiliates` |
+
+## Paraphrase fixture
+
+The fixture above uses the trigger phrases written into the descriptions, so it mostly tests self-consistency. **This one is the real test:** every prompt is phrased the way an operator would actually type it, deliberately avoiding the vocabulary in any trigger list.
+
+A miss here means the description is missing words real people use. Run `node .github/scripts/check-routing.js` to check both suites.
+
+| # | Prompt | Expected skill |
+|---|--------|----------------|
+| 1 | "nobody is buying the thing once they land on it" | `product-pages` |
+| 2 | "shoppers bail when they see the delivery charge" | `cart-and-checkout` |
+| 3 | "we ship a supplement, is it ok to mention it helps you sleep" | `claims-and-compliance` |
+| 4 | "half our orders come back" | `post-purchase-experience` |
+| 5 | "everyone buys once and vanishes" | `retention-and-loyalty` |
+| 6 | "folks sign up for texts but we never message them" | `lifecycle-flows` |
+| 7 | "what do I put in the newsletter next month" | `email-sms-campaigns` |
+| 8 | "nobody joins our mailing list" | `list-growth` |
+| 9 | "our thing costs too little I think" | `pricing-strategy` |
+| 10 | "customers wait for the sale before ordering" | `promotions-and-discounting` |
+| 11 | "how do I get people to buy two instead of one" | `bundles-and-aov` |
+| 12 | "Q4 is coming and we have nothing ready" | `bfcm-and-peak-season` |
+| 13 | "Facebook is eating money and returning nothing" | `paid-social` |
+| 14 | "need fresh video ideas for our reels ads" | `ad-creative` |
+| 15 | "our items are missing from the shopping tab" | `catalog-and-feeds` |
+| 16 | "Amazon pulled our page down" | `amazon-growth` |
+| 17 | "we sell on Etsy and nobody finds us" | `marketplace-listings` |
+| 18 | "boutiques keep asking for a price list" | `wholesale-and-retail` |
+| 19 | "customers in Britain want to order" | `international-expansion` |
+| 20 | "our category pages get no traffic from search" | `ecommerce-seo` |
+| 21 | "when people ask chatgpt for a recommendation we never come up" | `ai-search-visibility` |
+| 22 | "we want to be in a holiday roundup article" | `earned-media` |
+| 23 | "should we send free product to tiktok people" | `creators-and-affiliates` |
+| 24 | "subscribers keep quitting after two boxes" | `subscriptions-and-replenishment` |
+| 25 | "hardly anyone leaves us a star rating" | `reviews-and-reputation` |
+| 26 | "is version A or version B actually better" | `experimentation` |
+| 27 | "my numbers in shopify and google dont line up" | `measurement-and-analytics` |
+| 28 | "after all the fees are we even making money" | `profitability-and-incrementality` |
+| 29 | "where should the money go next quarter" | `growth-plan` |
+| 30 | "what do I show the client at month end" | `client-reporting` |
+| 31 | "give me the whole picture of whats wrong" | `growth-audit` |
+| 32 | "what are the people who buy from us actually like" | `customer-research` |
+| 33 | "who else sells this and what do they charge" | `category-intel` |
+| 34 | "tell me about the brands stuff so I stop repeating myself" | `brand-context` |
+| 35 | "which items show first when you click a category" | `collection-merchandising` |
+| 36 | "we are putting out a new flavor next month" | `product-launch` |
+| 37 | "the store feels slow and clunky on phones" | `site-cro` |
+| 38 | "we post on instagram but nothing happens" | `organic-social` |
+| 39 | "how do I bid on google shopping" | `google-ads` |
+| 40 | "our amazon ad costs are out of control" | `marketplace-ads` |
+
+**Threshold: 80%.** Do not tune descriptions to reach 100% — the checker is a bag-of-words proxy and a real agent matches semantically. Some of these ("our thing costs too little I think") carry no keyword signal at all and are unfixable by adding phrases; an LLM resolves them from meaning. Over-fitting to the checker can make descriptions worse in a live session.

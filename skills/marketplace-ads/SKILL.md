@@ -1,8 +1,8 @@
 ---
 name: marketplace-ads
-description: "When the user wants help with advertising on marketplaces or retail media networks. Also use when the user mentions 'Amazon PPC,' 'Amazon ads,' 'Sponsored Products,' 'Sponsored Brands,' 'Sponsored Display,' 'ACOS,' 'my ACOS is too high,' 'TACoS,' 'Walmart Connect,' 'retail media,' 'Instacart ads,' 'Criteo,' 'Target Roundel,' 'marketplace advertising,' 'bid management,' or 'negative keywords on Amazon.' This skill owns the ad buy on marketplaces. For Amazon listings, A+ content, Vine, Buy Box, and FBA economics, see amazon-growth. For Google Shopping, see google-ads. For paid social, see paid-social."
+description: "When the user wants help with advertising on marketplaces or retail media networks. Also use when the user mentions 'Amazon PPC,' 'Amazon ads,' 'Sponsored Products,' 'Sponsored Brands,' 'Sponsored Display,' 'ACOS,' 'my ACOS is too high,' 'TACoS,' 'Walmart Connect,' 'retail media,' 'Instacart ads,' 'Criteo,' 'Target Roundel,' 'marketplace advertising,' 'bid management,', 'negative keywords on Amazon,', 'Amazon ad spend,', 'Amazon ad costs,', 'ad costs out of control,', or 'Amazon advertising.' This skill owns the ad buy on marketplaces. For Amazon listings, A+ content, Vine, Buy Box, and FBA economics, see amazon-growth. For Google Shopping, see google-ads. For paid social, see paid-social."
 metadata:
-  version: 1.0.0
+  version: 1.1.0
 ---
 
 # Marketplace Ads

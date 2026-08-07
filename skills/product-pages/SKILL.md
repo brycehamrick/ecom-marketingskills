@@ -1,8 +1,8 @@
 ---
 name: product-pages
-description: "When the user wants to improve a product detail page — copy, images, variants, or conversion. Also use when the user mentions 'PDP,' 'product page,' 'product detail page,' 'product description,' 'product copy,' 'product photos,' 'image gallery,' 'variant selector,' 'size guide,' 'fit guide,' 'add to cart rate,' 'my product page isn't converting,' 'write a product description,' 'people look but don't buy,' or shares a product URL. This is the highest-leverage page in ecommerce — use it whenever the work is about a specific product's page. For homepage, navigation, site search, or sitewide friction, see site-cro. For collection and category pages, see collection-merchandising. For cart and checkout, see cart-and-checkout. For claims, disclosures, and channel policy, see claims-and-compliance."
+description: "When the user wants to improve a product detail page — copy, images, variants, or conversion. Also use when the user mentions 'PDP,' 'product page,' 'product detail page,' 'product description,' 'product copy,' 'product photos,' 'image gallery,' 'variant selector,' 'size guide,' 'fit guide,' 'add to cart rate,' 'my product page isn't converting,' 'write a product description,' 'people look but don't buy,' 'nobody adds to cart,' 'no one buys after landing on it,' or shares a product URL. This is the highest-leverage page in ecommerce — use it whenever the work is about a specific product's page. For homepage, navigation, site search, or sitewide friction, see site-cro. For collection and category pages, see collection-merchandising. For cart and checkout, see cart-and-checkout. For claims, disclosures, and channel policy, see claims-and-compliance."
 metadata:
-  version: 1.0.0
+  version: 1.1.0
 ---
 
 # Product Pages

@@ -1,8 +1,8 @@
 ---
 name: email-sms-campaigns
-description: "When the user wants to plan one-time scheduled email or SMS sends, build a campaign calendar, or fix deliverability. Also use when the user mentions 'campaign,' 'newsletter,' 'email calendar,' 'send schedule,' 'what should we send,' 'segmentation,' 'send frequency,' 'how often should we email,' 'deliverability,' 'landing in spam,' 'Promotions tab,' 'open rates dropped,' 'DMARC,' 'BIMI,' 'sender reputation,' 'list hygiene,' 'unsubscribes,' or 'spam complaints.' email-sms-campaigns owns one-time scheduled sends and the campaign calendar; lifecycle-flows owns automated triggered flows that run continuously. For getting subscribers in the first place, see list-growth. For claims, disclosures, and channel policy, see claims-and-compliance."
+description: "When the user wants to plan one-time scheduled email or SMS sends, build a campaign calendar, or fix deliverability. Also use when the user mentions 'campaign,' 'newsletter,' 'email calendar,' 'send schedule,' 'what should we send,' 'segmentation,' 'send frequency,' 'how often should we email,' 'deliverability,' 'landing in spam,' 'Promotions tab,' 'open rates dropped,' 'DMARC,' 'BIMI,' 'sender reputation,' 'list hygiene,' 'unsubscribes,' 'spam complaints,' 'newsletter,' 'what should we send this month,' or 'monthly send.' email-sms-campaigns owns one-time scheduled sends and the campaign calendar; lifecycle-flows owns automated triggered flows that run continuously. For getting subscribers in the first place, see list-growth. For claims, disclosures, and channel policy, see claims-and-compliance."
 metadata:
-  version: 1.0.0
+  version: 1.1.0
 ---
 
 # Email and SMS Campaigns
