@@ -1,5 +1,5 @@
 name: Skill Request
-description: Request a new marketing skill
+description: Request a new ecommerce marketing skill
 title: "Skill Request: [skill-name]"
 labels: ["enhancement"]
 body:
@@ -54,12 +54,15 @@ body:
       label: Category
       description: Which category does this skill fit into?
       options:
-        - CRO (Conversion Rate Optimization)
-        - Copywriting
-        - SEO
-        - Paid Ads
-        - Growth / Strategy
-        - Analytics
+        - Foundation & Research
+        - Product & Merchandising
+        - Offer & Economics
+        - Paid Acquisition
+        - Organic Discovery
+        - Marketplace & Channel
+        - Conversion
+        - Lifecycle & Retention
+        - Measurement & Planning
         - Other
     validations:
       required: true

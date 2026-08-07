@@ -4,5 +4,8 @@ contact_links:
     url: https://agentskills.io/specification.md
     about: Learn the skill format before creating or requesting a skill
   - name: Contributing Guide
-    url: https://github.com/coreyhaines31/marketingskills/blob/main/CONTRIBUTING.md
+    url: https://github.com/brycehamrick/ecom-marketingskills/blob/main/CONTRIBUTING.md
     about: How to contribute a new skill to this repository
+  - name: Routing Contract
+    url: https://github.com/brycehamrick/ecom-marketingskills/blob/main/ROUTING.md
+    about: Skill boundaries — read before proposing a skill that overlaps an existing one

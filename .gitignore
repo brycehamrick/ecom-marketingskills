@@ -19,7 +19,7 @@ skills-lock.json
 * 2.*
 * 2/
 
-# Remotion video project (root only, not skills/video/)
+# Local video render output (root only)
 /video/
 
 # Editor

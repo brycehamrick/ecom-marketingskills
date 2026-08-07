@@ -1,18 +1,18 @@
 {
-  "name": "marketingskills",
+  "name": "ecommerce-marketingskills",
   "owner": {
-    "name": "Corey Haines",
-    "url": "https://corey.co"
+    "name": "Bryce Hamrick",
+    "url": "https://github.com/brycehamrick"
   },
   "metadata": {
-    "description": "Marketing skills for AI agents — conversion optimization, copywriting, SEO, paid ads, and growth",
-    "version": "2.10.0",
-    "repository": "https://github.com/coreyhaines31/marketingskills"
+    "description": "Ecommerce marketing skills for AI agents — merchandising, product pages, paid acquisition, lifecycle, marketplaces, and retention",
+    "version": "1.0.0",
+    "repository": "https://github.com/brycehamrick/ecom-marketingskills"
   },
   "plugins": [
     {
-      "name": "marketing-skills",
-      "description": "49 marketing skills for technical marketers and founders: CRO, copywriting, cold email, prospecting, SEO, AI SEO, paid ads, SMS, ad creative, video production, image generation, co-marketing, churn prevention, pricing, referrals, revenue operations, sales enablement, customer research, site architecture, comprehensive AARRR-structured marketing plans, public relations and earned media, offer design, and more",
+      "name": "ecommerce-marketing-skills",
+      "description": "40 ecommerce marketing skills for DTC brands, marketplace sellers, wholesale/omnichannel brands, and the agencies that serve them: product detail pages, collection merchandising, product feeds, paid social, Google Shopping, Amazon growth, retail media, ad creative, lifecycle flows, email and SMS, subscriptions, loyalty, post-purchase, reviews, ecommerce SEO, wholesale and Faire, international expansion, profitability and incrementality, and BFCM planning",
       "source": "./"
     }
   ]

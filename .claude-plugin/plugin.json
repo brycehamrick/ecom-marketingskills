@@ -1,12 +1,12 @@
 {
-  "name": "marketing-skills",
-  "description": "Marketing skills for AI agents — conversion optimization, copywriting, SEO, paid ads, ad creative, and growth",
-  "version": "2.10.0",
+  "name": "ecommerce-marketing-skills",
+  "description": "Ecommerce marketing skills for AI agents — merchandising, product pages, paid acquisition, lifecycle, marketplaces, and retention",
+  "version": "1.0.0",
   "author": {
-    "name": "Corey Haines"
+    "name": "Bryce Hamrick"
   },
-  "homepage": "https://github.com/coreyhaines31/marketingskills",
-  "repository": "https://github.com/coreyhaines31/marketingskills",
+  "homepage": "https://github.com/brycehamrick/ecom-marketingskills",
+  "repository": "https://github.com/brycehamrick/ecom-marketingskills",
   "license": "MIT",
   "skills": "./skills"
 }

@@ -162,7 +162,9 @@ Typical prospecting flow:
 3. **For programmatic workflows**: POST emails to `/api/v1/verify` for async bulk OR `/api/v1/verify_inline` for sync single
 4. **For one-offs**: CSV upload via dashboard, download annotated CSV
 5. Filter: keep `email_state: ok`, include `risky`/`accept_all` cautiously with a strategy, exclude `email_invalid`, re-verify `unknown`
-6. Hand cleaned list to outreach platform (Instantly, Lemlist, Outreach, etc.) — see [outreach.md](outreach.md), [instantly.md](instantly.md), [lemlist.md](lemlist.md)
+6. Import the cleaned list into the ESP — see [klaviyo.md](klaviyo.md), [omnisend.md](omnisend.md), [sendlane.md](sendlane.md)
+
+**Agent note**: in ecommerce the main use is list hygiene, not prospecting. Verifying before a large send protects sender reputation, and a sustained spam-complaint rate above ~0.3% triggers bulk-sender enforcement at Gmail and Yahoo. See the `email-sms-campaigns` skill for the deliverability repair sequence.
 
 ## Native Integrations (no API code required)
 

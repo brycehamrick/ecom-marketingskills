@@ -1,421 +1,192 @@
 ---
 name: ad-creative
-description: "When the user wants to generate, iterate, or scale ad creative — headlines, descriptions, primary text, or full ad variations — for any paid advertising platform. Also use when the user mentions 'ad copy variations,' 'ad creative,' 'generate headlines,' 'RSA headlines,' 'bulk ad copy,' 'ad iterations,' 'creative testing,' 'ad performance optimization,' 'write me some ads,' 'Facebook ad copy,' 'Google ad headlines,' 'LinkedIn ad text,' 'static ads,' 'static ad concepts,' 'ad templates,' 'iMessage ad,' 'chat reveal ad,' 'fake DM ad,' 'ChatGPT ad,' 'Apple Notes ad,' 'AirDrop ad,' 'creative strategy,' 'creative roadmap,' 'creative retro,' 'hook writing,' 'creative review page,' 'present ad creative for approval,' 'motion video ad,' 'faceless video ad,' 'animated explainer ad,' 'motion collage ad,' or 'I need more ad variations.' Use this whenever someone needs to produce ad copy at scale or iterate on existing ads. For campaign strategy and targeting, see ads. For landing page copy, see copywriting."
+description: "When the user wants ad concepts, hooks, scripts, or copy for ecommerce advertising. Also use when the user mentions 'ad copy,' 'ad creative,' 'write me some ads,' 'hooks,' 'give me 10 hooks,' 'ad angles,' 'UGC script,' 'creator brief,' 'video ad script,' 'static ad,' 'thumb stopper,' 'creative testing,' 'creative refresh,' 'our ads are fatigued,' 'iterate on this winning ad,' 'headlines,' or 'primary text.' This skill produces the creative. For campaign structure, budgets, bidding, audiences, and scaling, see paid-social. For Google Shopping and PMax, see google-ads. For claims, disclosures, and channel policy, see claims-and-compliance."
 metadata:
-  version: 2.8.0
+  version: 1.0.0
 ---
 
 # Ad Creative
 
-You are an expert performance creative strategist. Your goal is to generate high-performing ad creative at scale — headlines, descriptions, and primary text that drive clicks and conversions — and iterate based on real performance data.
+You are an ecommerce direct-response creative strategist. Your goal is to produce ad concepts that stop the scroll and sell the product — in volume, because creative volume is the constraint on paid growth.
 
-## Before Starting
+On modern ad platforms, creative is the targeting. Algorithms find the buyer; the creative decides whether there is a buyer to find. A brand producing four new concepts a week outperforms one producing four a quarter with better craft.
 
-**Check for product marketing context first:**
-If `.agents/product-marketing.md` exists (or `.claude/product-marketing.md`, or the legacy `product-marketing-context.md` filename, in older setups), read it before asking questions. Use that context and only ask for information not already covered or specific to this task.
+## Initial Assessment
 
-Gather this context (ask if not provided):
+**Check for brand context first:**
+If `.agents/brand-context.md` exists, read it before asking questions. Section 3 (customer) and section 4 (voice) drive the angles; section 1 (regulatory category) constrains the claims.
 
-### 1. Platform & Format
-- What platform? (Google Ads, Meta, LinkedIn, TikTok, Twitter/X)
-- What ad format? (Search RSAs, display, social feed, stories, video)
-- Are there existing ads to iterate on, or starting from scratch?
+Identify:
 
-### 2. Product & Offer
-- What are you promoting? (Product, feature, free trial, demo, lead magnet)
-- What's the core value proposition?
-- What makes this different from competitors?
-
-### 3. Audience & Intent
-- Who is the target audience?
-- What stage of awareness? (Problem-aware, solution-aware, product-aware)
-- What pain points or desires drive them?
-
-### 4. Performance Data (if iterating)
-- What creative is currently running?
-- Which headlines/descriptions are performing best? (CTR, conversion rate, ROAS)
-- Which are underperforming?
-- What angles or themes have been tested?
-
-### 5. Constraints
-- Brand voice guidelines or words to avoid?
-- Compliance requirements? (Industry regulations, platform policies)
-- Any mandatory elements? (Brand name, trademark symbols, disclaimers)
+1. **What already works** — pull current and past winners. The highest-yield creative work is iterating on a proven concept, not inventing a new one
+2. **Awareness level of the audience** — problem-unaware, problem-aware, solution-aware, product-aware. A cold prospecting ad and a retargeting ad are different jobs
+3. **Placement and format** — feed, Reels, Stories, Shorts, TikTok. Aspect ratio, length, and sound expectations differ
+4. **Asset inventory** — what footage, photography, UGC, and reviews exist. A brief that requires a shoot nobody will fund is worthless
+5. **Regulatory category** — supplements, beauty, food, and kids' products constrain claims and before/after imagery heavily. See `claims-and-compliance`
 
 ---
 
-## How This Skill Works
+## Framework
 
-This skill supports four modes:
+### 1. Angles Before Executions
 
-### Mode 1: Generate from Scratch
-When starting fresh, you generate a full set of ad creative based on product context, audience insights, and platform best practices.
+An **angle** is the argument. An **execution** is how it is shown. Most brands make twenty executions of one angle and call it creative testing.
 
-### Mode 2: Iterate from Performance Data
-When the user provides performance data (CSV, paste, or API output), you analyze what's working, identify patterns in top performers, and generate new variations that build on winning themes while exploring new angles.
+Test angles first. Once an angle wins, produce many executions of it.
 
-The core loop:
+**Angle sources, ranked by yield:**
 
-```
-Pull performance data → Identify winning patterns → Generate new variations → Validate specs → Deliver
-```
+1. **Reviews** — the unexpected benefit customers keep mentioning that marketing never claimed. This is the single best source of winning angles. See `customer-research`
+2. **Objections** — the top reason people do not buy, answered head-on. "Won't work on my hair type" becomes an ad
+3. **The alternative being displaced** — what they use now and why it fails
+4. **The trigger moment** — the situation that puts someone in market
+5. **Category gaps** — angles no competitor runs. See `category-intel`
+6. **Mechanism** — why it works, when the mechanism is genuinely differentiating
 
-### Mode 3: Scaled Static Batches (Grounded)
-For recurring static ad production at volume (e.g., 50 concepts per batch), work from a **grounded inputs corpus** and the [static ad template library](references/static-ad-templates.md). Every concept must trace to real source material — see "Grounded Inputs" below. To run this on a daily or weekly cadence, see the daily-creative-drop loop in **marketing-loops**. To present a batch for client or stakeholder approval, produce a [creative review page](references/creative-review-page.md).
+**Build an angle matrix:** angle × format × awareness level. That is the test plan, and it produces volume systematically instead of by inspiration.
 
-### Mode 4: Creative Strategy Loop
-For deciding **which ads are worth making before making them**: synthesize three signal sources (account performance, customer language, external organic) into evidence-ranked concepts, branch the creative mix on account state (exploration vs. scaling), maintain a capacity-checked roadmap with production tiers, and run a monthly retro that feeds the next slate. The full system lives in [references/creative-roadmap.md](references/creative-roadmap.md); for hook generation and funnel-stage diagnosis inside any mode, load [references/hook-system.md](references/hook-system.md).
+### 2. The Hook
 
----
+The first two seconds decide the outcome. Most ad spend is lost here, not in the body.
 
-## Grounded Inputs
+**Hook patterns that work in ecommerce:**
 
-Most AI ad generation fails on input grounding, not output quality: ungrounded generation produces plausible-sounding ads based on training data, not on what converts for this brand. For scaled production (Mode 3), maintain a durable inputs corpus:
+| Pattern | Example shape |
+|---|---|
+| Problem callout | "If your [problem], this is why" |
+| Contrarian | "Stop [common practice]" |
+| Result-first | Show the outcome immediately, explain after |
+| Unboxing/reveal | Movement and curiosity in frame one |
+| Comparison | Side by side, wrong way vs right way |
+| Social proof | "12,000 people switched to this" |
+| Question | Direct, specific, answerable in the ad |
+| Demonstration | The product doing the thing, no preamble |
+| Founder direct | A real person to camera saying something specific |
 
-```
-inputs/
-  winning-ads/   10-20 screenshots of the highest-performing ads from the last 90 days
-  reviews/       50-100 customer reviews (Trustpilot, G2, Amazon, App Store) as .md/.txt
-  comments/      Top comments from existing ad campaigns — objections, unprompted praise, customer-raised angles
-brand/           Brand voice doc, hex codes, logo, product/screenshot assets
-outputs/         Dated batch folders (outputs/YYYY-MM-DD/)
-```
+**Rules:**
+- Show the product or the problem in frame one. A logo intro is wasted budget
+- Motion in the first frame — static openings get scrolled past
+- Text on screen: most viewing is sound-off. If the hook only works with audio, it does not work
+- Write ten hooks per angle. The first three will be obvious; the good one is usually in the back half
 
-**Why each input matters:**
-- **Winning ads** carry the hooks, structures, and angles already proven for this brand
-- **Reviews** carry the exact language buyers use for pain, transformation, and unexpected benefits — pull copy from them verbatim rather than paraphrasing
-- **Ad comments** are the most-skipped and highest-value input: objections ("but does it work for X?") become FAQ Card ads, and unprompted praise surfaces angles you didn't write
+Avoid personal-attribute framing that asserts something about the viewer ("Struggling with acne?") — it triggers Meta policy. Reframe to the product or the outcome. See `claims-and-compliance`.
 
-**Grounding rules:**
-- Every concept cites its source (which review, winning ad, or comment it traces to)
-- No invented claims, stats, or testimonials — ever
-- If `inputs/winning-ads/` or `inputs/reviews/` is empty, stop and ask the user to populate it before generating. Do not generate ungrounded concepts as a fallback.
-- Inputs decay: refresh `inputs/winning-ads/` as new ads scale; refresh `inputs/reviews/` and `inputs/comments/` monthly
+### 3. Formats
 
----
+**UGC / creator-style** — the default workhorse for DTC. Feels native, cheap to produce in volume, performs across placements.
+- Brief the creator on the *angle*, not the script, and let them speak naturally
+- Specify the hook, the beats to hit, and the required disclosure
+- Require raw footage so multiple edits can be cut from one shoot
+- FTC disclosure is mandatory and is the brand's liability. See `creators-and-affiliates`
 
-## Platform Specs
+**Static** — cheapest to produce and iterate, still competitive, especially for retargeting and offer messaging.
+- Product on a clear background with a bold claim
+- Before/after where permitted
+- Comparison charts and "this not that"
+- Review or testimonial screenshots as image
+- Native-looking formats (chat, notes app, search result) — effective, but must not misrepresent a real platform or person
 
-Platforms reject or truncate creative that exceeds these limits, so verify every piece of copy fits before delivering.
+**Founder / talking head** — high trust, cheap, underused. Strong for a brand with a real origin story or a technical product.
 
-### Google Ads (Responsive Search Ads)
+**Demonstration** — for anything with a visible mechanism, texture, transformation, or assembly. Often the highest-performing format when it applies.
 
-| Element | Limit | Quantity |
-|---------|-------|----------|
-| Headline | 30 characters | Up to 15 |
-| Description | 90 characters | Up to 4 |
-| Display URL path | 15 characters each | 2 paths |
+**Motion graphics** — for products that are hard to film, or offer and promo messaging.
 
-**RSA rules:**
-- Headlines must make sense independently and in any combination
-- Pin headlines to positions only when necessary (reduces optimization)
-- Include at least one keyword-focused headline
-- Include at least one benefit-focused headline
-- Include at least one CTA headline
+### 4. Ad Copy
 
-### Meta Ads (Facebook/Instagram)
+**Primary text:**
+- First line is the hook — the rest is truncated behind "See more"
+- Short paragraphs. Line breaks. Emojis sparingly and only where the voice allows
+- One idea, one CTA
+- Long-form copy works when the product needs explanation; do not default to short
 
-| Element | Limit | Notes |
-|---------|-------|-------|
-| Primary text | 125 chars visible (up to 2,200) | Front-load the hook |
-| Headline | 40 characters recommended | Below the image |
-| Description | 30 characters recommended | Below headline |
-| URL display link | 40 characters | Optional |
+**Headline:** the value proposition or the offer. Not the brand name.
 
-### LinkedIn Ads
+**Description:** a supporting detail or trust signal.
 
-| Element | Limit | Notes |
-|---------|-------|-------|
-| Intro text | 150 chars recommended (600 max) | Above the image |
-| Headline | 70 chars recommended (200 max) | Below the image |
-| Description | 100 chars recommended (300 max) | Appears in some placements |
+**Google RSA headlines and descriptions:** write to be assembled in any combination — every headline must stand alone and never contradict another. See `google-ads`.
 
-### TikTok Ads
+### 5. Iterating on Winners
 
-| Element | Limit | Notes |
-|---------|-------|-------|
-| Ad text | 80 chars recommended (100 max) | Above the video |
-| Display name | 40 characters | Brand name |
+When a concept wins, do not move on. Most of the return is in exploiting it.
 
-### Twitter/X Ads
+**Iteration ladder, in order:**
+1. New hooks on the same body — cheapest, highest yield
+2. New creator, same script
+3. New format of the same angle (UGC winner → static, static winner → video)
+4. Length variants
+5. New offer or CTA on the same creative
+6. Localized or seasonal variants
 
-| Element | Limit | Notes |
-|---------|-------|-------|
-| Tweet text | 280 characters | The ad copy |
-| Headline | 70 characters | Card headline |
-| Description | 200 characters | Card description |
+Only after the ladder is exhausted do you need a new angle.
 
-For detailed specs and format variations, see [references/platform-specs.md](references/platform-specs.md).
+### 6. Fatigue
 
----
+Fatigue is real and it is measurable. Watch frequency rising while CTR and conversion rate fall on a stable audience.
 
-## Generating Ad Visuals
+- Refresh at the concept level, not the variation level. A new color grade on a fatigued concept does nothing
+- Keep a live pipeline so replacements exist before performance drops
+- Retire, do not delete — fatigued concepts often work again after a rest, or on a different placement
 
-**For static ad structure**, use the 15-template library in [references/static-ad-templates.md](references/static-ad-templates.md) — layout frameworks (Us vs. Them, Stat Callout, Review Card, Before/After, Founder Message, FAQ Card, and more) with copy slots, DTC and SaaS examples, and per-concept output format. Cycle through all 15 rather than clustering on favorites: template diversity is angle diversity.
+**Production cadence** that sustains scale: a handful of new concepts per week at meaningful spend, with a larger number of variations off the winners. Below that, the account plateaus regardless of media buying quality.
 
-**For iOS-native reveal video ads** — iMessage chat reveals (scripted thread unfolds bubble-by-bubble: screenshot hook → friend asks "what app is that?" → brand + promo code reveal → end card), ChatGPT reveals (typed question → streaming answer), Apple Notes reveals (a confessional note typed live), and AirDrop reveals (an incoming share where the accept-tap is the reveal) — see [references/imessage-video-ads.md](references/imessage-video-ads.md) for surface selection, the six concept angles, script and pacing rules, production routes (off-the-shelf, Playwright + ffmpeg pipeline, Remotion), craft details that sell the illusion, and the grounding/compliance rules for dramatized conversations (strictest for fabricated AI answers).
+### 7. Testing Structure
 
-**For faceless motion-style video ads** — fully generated 15–45s concept/explainer videos (styled poster stills → image-to-video "living" motion → TTS narration → word-timed captions; roughly $3–6 and ~15 minutes per finished video) — see [references/motion-video-ads.md](references/motion-video-ads.md) for the provider-agnostic pipeline, a nine-style visual library with fill-in prompt formulas — five characterful looks (screen-print collage, flat vector explainer, papercraft diorama, pop-art comic, claymation) plus four brand-flexible token-driven styles (monoline editorial, Swiss typographic, wireglow, duotone screenprint) driven by a brand-slots contract (FIELD / INK / ACCENT / TYPE FEEL) — the motion prompt formula, and hard-earned QC gotchas (maker-hands intrusion, final-two-seconds drift, caption/label collision, TTS/whisper sound-alikes).
-
-For image and video generation tools, see [references/generative-tools.md](references/generative-tools.md) for the complete guide covering:
-
-- **Image generation** — Nano Banana Pro (Gemini), Flux, Ideogram for static ad images
-- **Video generation** — Veo, Kling, Runway, Sora, Seedance, Higgsfield for video ads
-- **Voice & audio** — ElevenLabs, OpenAI TTS, Cartesia for voiceovers, cloning, multilingual
-- **Code-based video** — Remotion for templated, data-driven video at scale
-- **Platform image specs** — Correct dimensions for every ad placement
-- **Cost comparison** — Pricing for 100+ ad variations across tools
-
-**Recommended workflow for scaled production:**
-1. Generate hero creative with AI tools (exploratory, high-quality)
-2. Build Remotion templates based on winning patterns
-3. Batch produce variations with Remotion using data feeds
-4. Iterate — AI for new angles, Remotion for scale
+- Test **one variable at a time** when learning; test whole concepts against each other when hunting winners
+- Judge on cost per purchase and contribution margin, not CTR. High-CTR creative that does not convert is expensive
+- Give a test enough conversions to mean anything. Calling a winner on a handful of purchases is noise. See `experimentation`
+- Log every test: angle, format, hook, result. The library of what failed is as valuable as the winners, and it is what stops a team retesting the same idea every quarter
 
 ---
 
-## Generating Ad Copy
+## Output Format
 
-### Step 1: Define Your Angles
+### Angle Matrix
+Table of angles: the argument, the evidence it rests on (review quote, objection, competitor gap), the awareness level it targets, and the format that suits it.
 
-Before writing individual headlines, establish 3-5 distinct **angles** — different reasons someone would click. Each angle should tap into a different motivation.
+### Hooks
+Ten or more per priority angle, written as they would appear on screen or in the first line.
 
-**Common angle categories:**
+### Full Creative Concepts
+For each priority concept:
+- Concept name and angle
+- Format and placement
+- Hook, with on-screen text
+- Script or shot list, beat by beat, with timings for video
+- Primary text, headline, description
+- Required assets and whether they exist
+- Claims used, and what substantiates them
 
-| Category | Example Angle |
-|----------|---------------|
-| Pain point | "Stop wasting time on X" |
-| Outcome | "Achieve Y in Z days" |
-| Social proof | "Join 10,000+ teams who..." |
-| Curiosity | "The X secret top companies use" |
-| Comparison | "Unlike X, we do Y" |
-| Urgency | "Limited time: get X free" |
-| Identity | "Built for [specific role/type]" |
-| Contrarian | "Why [common practice] doesn't work" |
+### Creator Brief
+Where UGC is recommended: the angle, required beats, what not to say, disclosure requirements, deliverable specs, and raw-footage requirement.
 
-### Step 2: Generate Variations per Angle
+### Test Plan
+What is being tested against what, the success metric, and the volume needed before calling it. See `experimentation`.
 
-For each angle, generate multiple variations. Vary:
-- **Word choice** — synonyms, active vs. passive
-- **Specificity** — numbers vs. general claims
-- **Tone** — direct vs. question vs. command
-- **Structure** — short punch vs. full benefit statement
-
-### Step 3: Validate Against Specs
-
-Before delivering, check every piece of creative against the platform's character limits. Flag anything that's over and provide a trimmed alternative.
-
-### Step 4: Organize for Upload
-
-Present creative in a structured format that maps to the ad platform's upload requirements.
+### Compliance Notes
+Any claim, image, or framing needing review before it runs. See `claims-and-compliance`.
 
 ---
 
-## Iterating from Performance Data
+## Task-Specific Questions
 
-When the user provides performance data, follow this process:
-
-### Step 1: Analyze Winners
-
-Look at the top-performing creative (by CTR, conversion rate, or ROAS — ask which metric matters most) and identify:
-
-- **Winning themes** — What topics or pain points appear in top performers?
-- **Winning structures** — Questions? Statements? Commands? Numbers?
-- **Winning word patterns** — Specific words or phrases that recur?
-- **Character utilization** — Are top performers shorter or longer?
-
-### Step 2: Analyze Losers
-
-Look at the worst performers and identify:
-
-- **Themes that fall flat** — What angles aren't resonating?
-- **Common patterns in low performers** — Too generic? Too long? Wrong tone?
-
-### Step 3: Generate New Variations
-
-Create new creative that:
-- **Doubles down** on winning themes with fresh phrasing
-- **Extends** winning angles into new variations
-- **Tests** 1-2 new angles not yet explored
-- **Avoids** patterns found in underperformers
-
-### Step 4: Document the Iteration
-
-Track what was learned and what's being tested:
-
-```
-## Iteration Log
-- Round: [number]
-- Date: [date]
-- Top performers: [list with metrics]
-- Winning patterns: [summary]
-- New variations: [count] headlines, [count] descriptions
-- New angles being tested: [list]
-- Angles retired: [list]
-```
-
----
-
-## Writing Quality Standards
-
-### Headlines That Click
-
-**Strong headlines:**
-- Specific ("Cut reporting time 75%") over vague ("Save time")
-- Benefits ("Ship code faster") over features ("CI/CD pipeline")
-- Active voice ("Automate your reports") over passive ("Reports are automated")
-- Include numbers when possible ("3x faster," "in 5 minutes," "10,000+ teams")
-
-**Avoid:**
-- Jargon the audience won't recognize
-- Claims without specificity ("Best," "Leading," "Top")
-- All caps or excessive punctuation
-- Clickbait that the landing page can't deliver on
-
-### Descriptions That Convert
-
-Descriptions should complement headlines, not repeat them. Use descriptions to:
-- Add proof points (numbers, testimonials, awards)
-- Handle objections ("No credit card required," "Free forever for small teams")
-- Reinforce CTAs ("Start your free trial today")
-- Add urgency when genuine ("Limited to first 500 signups")
-
----
-
-## Output Formats
-
-### Standard Output
-
-Organize by angle, with character counts:
-
-```
-## Angle: [Pain Point — Manual Reporting]
-
-### Headlines (30 char max)
-1. "Stop Building Reports by Hand" (29)
-2. "Automate Your Weekly Reports" (28)
-3. "Reports Done in 5 Min, Not 5 Hr" (31) <- OVER LIMIT, trimmed below
-   -> "Reports in 5 Min, Not 5 Hrs" (27)
-
-### Descriptions (90 char max)
-1. "Marketing teams save 10+ hours/week with automated reporting. Start free." (73)
-2. "Connect your data sources once. Get automated reports forever. No code required." (80)
-```
-
-### Bulk CSV Output
-
-When generating at scale (10+ variations), offer CSV format for direct upload:
-
-```csv
-headline_1,headline_2,headline_3,description_1,description_2,platform
-"Stop Manual Reporting","Automate in 5 Minutes","Join 10K+ Teams","Save 10+ hrs/week on reports. Start free.","Connect data sources once. Reports forever.","google_ads"
-```
-
-### Static Batch Output (Mode 3)
-
-For scaled static batches, save to a dated folder with an index:
-
-```
-outputs/YYYY-MM-DD/
-  INDEX.md        # every concept: template type + grounding source, scannable in 2 min
-  concepts/       # one .md per concept: headline, body, visual description, image prompt, grounding
-  images/         # generated images, if an image tool is configured
-```
-
-Per-concept format is defined in [references/static-ad-templates.md](references/static-ad-templates.md). The human workflow this supports: open the folder, scan INDEX.md, pick the best 5-10 for testing — picking 5 winners from 50 concepts yields better creative than picking 5 from 10.
-
-### Creative Review Page (client / stakeholder approval)
-
-When a person who isn't you needs to review and pick — a client, a partner, a stakeholder — produce a **creative review page**: a self-contained HTML artifact that presents each concept as an in-feed platform mockup (Instagram/Facebook, with a whitelist-handle toggle), breaks carousels into a labeled frame-by-frame storyboard, lets them toggle headline/copy variations, and discloses what's grounded in real assets. It's the visual upgrade to INDEX.md — a decision made off one link instead of by reading markdown. The template ships at [assets/creative-review-template.html](assets/creative-review-template.html) (one file, no build, hostable anywhere); populate its `DATA` object from your generated concepts. Full data model, grounding rules (the disclosure block is required), and delivery in [references/creative-review-page.md](references/creative-review-page.md).
-
-### Iteration Report
-
-When iterating, include a summary:
-
-```
-## Performance Summary
-- Analyzed: [X] headlines, [Y] descriptions
-- Top performer: "[headline]" — [metric]: [value]
-- Worst performer: "[headline]" — [metric]: [value]
-- Pattern: [observation]
-
-## New Creative
-[organized variations]
-
-## Recommendations
-- [What to pause, what to scale, what to test next]
-```
-
----
-
-## Batch Generation Workflow
-
-For large-scale creative production (Anthropic's growth team generates 100+ variations per cycle):
-
-### 1. Break into sub-tasks
-- **Headline generation** — Focused on click-through
-- **Description generation** — Focused on conversion
-- **Primary text generation** — Focused on engagement (Meta/LinkedIn)
-
-### 2. Generate in waves
-- Wave 1: Core angles (3-5 angles, 5 variations each)
-- Wave 2: Extended variations on top 2 angles
-- Wave 3: Wild card angles (contrarian, emotional, specific)
-
-### 3. Quality filter
-- Remove anything over character limit
-- Remove duplicates or near-duplicates
-- Flag anything that might violate platform policies
-- Ensure headline/description combinations make sense together
-
----
-
-## Common Mistakes
-
-- **Writing headlines that only work together** — RSA headlines get combined randomly
-- **Ignoring character limits** — Platforms truncate without warning
-- **All variations sound the same** — Vary angles, not just word choice
-- **No CTA headlines** — RSAs need action-oriented headlines to drive clicks; include at least 2-3
-- **Generic descriptions** — "Learn more about our solution" wastes the slot
-- **Iterating without data** — Gut feelings are less reliable than metrics
-- **Generating without grounding** — Ungrounded concepts read like every other ad in the feed; feed the skill winning ads, reviews, and comments first
-- **Skipping the comments input** — Ad comments hold the objections and angles customers raise themselves; those usually convert best
-- **Testing too many things at once** — Change one variable per test cycle
-- **Retiring creative too early** — Allow 1,000+ impressions before judging
-
----
-
-## Tool Integrations
-
-For pulling performance data and managing campaigns, see the [tools registry](../../tools/REGISTRY.md).
-
-| Platform | Pull Performance Data | Manage Campaigns | Guide |
-|----------|:---------------------:|:----------------:|-------|
-| **Google Ads** | `google-ads campaigns list`, `google-ads reports get` | `google-ads campaigns create` | [google-ads.md](../../tools/integrations/google-ads.md) |
-| **Meta Ads** | `meta-ads insights get` | `meta-ads campaigns list` | [meta-ads.md](../../tools/integrations/meta-ads.md) |
-| **LinkedIn Ads** | `linkedin-ads analytics get` | `linkedin-ads campaigns list` | [linkedin-ads.md](../../tools/integrations/linkedin-ads.md) |
-| **TikTok Ads** | `tiktok-ads reports get` | `tiktok-ads campaigns list` | [tiktok-ads.md](../../tools/integrations/tiktok-ads.md) |
-
-### Workflow: Pull Data, Analyze, Generate
-
-```bash
-# 1. Pull recent ad performance
-node tools/clis/google-ads.js reports get --type ad_performance --date-range last_30_days
-
-# 2. Analyze output (identify top/bottom performers)
-# 3. Feed winning patterns into this skill
-# 4. Generate new variations
-# 5. Upload to platform
-```
+1. What creative is working now, and what has worked before?
+2. What do reviews say people love that your ads do not mention?
+3. What is the top reason people give for not buying?
+4. What assets do you have — footage, photography, UGC, creator relationships?
+5. What platforms and placements is this for?
+6. Is the product in a regulated category?
+7. How many new concepts can you produce per week, and who produces them?
 
 ---
 
 ## Related Skills
 
-- **ads**: For campaign strategy, targeting, budgets, and optimization
-- **marketing-loops**: For running static batch generation on a recurring cadence (the daily-creative-drop loop)
-- **customer-research**: For mining reviews and comments when building the grounded inputs corpus
-- **copywriting**: For landing page copy (where ad traffic lands)
-- **ab-testing**: For structuring creative tests with statistical rigor
-- **marketing-psychology**: For psychological principles behind high-performing creative
-- **copy-editing**: For polishing ad copy before launch
+- **paid-social**: For campaign structure, budget, bidding, audiences, and scaling
+- **google-ads**: For Shopping, PMax assets, and RSA specifics
+- **marketplace-ads**: For Amazon Sponsored Brands creative
+- **customer-research**: For the review language and objections that generate angles
+- **category-intel**: For which angles competitors run and which are unclaimed
+- **creators-and-affiliates**: For sourcing creators and structuring UGC production
+- **claims-and-compliance**: Before any regulated claim or before/after runs
+- **experimentation**: For test design and calling winners honestly

@@ -6,25 +6,33 @@ Guidelines for AI agents working in this repository.
 
 This repository contains **Agent Skills** for AI agents following the [Agent Skills specification](https://agentskills.io/specification.md). Skills install to `.agents/skills/` (the cross-agent standard). This repo also serves as a **Claude Code plugin marketplace** via `.claude-plugin/marketplace.json`.
 
-- **Name**: Marketing Skills
-- **GitHub**: [coreyhaines31/marketingskills](https://github.com/coreyhaines31/marketingskills)
-- **Creator**: Corey Haines
+- **Name**: Ecommerce Marketing Skills
+- **GitHub**: [brycehamrick/ecom-marketingskills](https://github.com/brycehamrick/ecom-marketingskills)
+- **Maintainer**: Bryce Hamrick
 - **License**: MIT
+- **Upstream**: forked from [coreyhaines31/marketingskills](https://github.com/coreyhaines31/marketingskills) (B2B SaaS). The skill set was rewritten from scratch for ecommerce; the scaffolding is upstream's.
+
+**Scope**: 40 skills serving four operators — DTC brands, marketplace sellers, wholesale/omnichannel brands, and agencies. If a proposed skill only makes sense for a software product, it does not belong here.
 
 ## Repository Structure
 
 ```
-marketingskills/
+ecom-marketingskills/
 ├── .claude-plugin/
-│   └── marketplace.json   # Claude Code plugin marketplace manifest
-├── skills/                # Agent Skills
+│   ├── marketplace.json   # Claude Code plugin marketplace manifest
+│   └── plugin.json        # Plugin manifest (version synced from marketplace.json)
+├── skills/                # 40 Agent Skills
 │   └── skill-name/
-│       └── SKILL.md       # Required skill file
+│       ├── SKILL.md       # Required skill file (<500 lines)
+│       └── references/    # Optional depth: platform specs, templates, lookup tables
 ├── tools/
-│   ├── clis/              # Zero-dependency Node.js CLI tools (51 tools)
+│   ├── clis/              # Zero-dependency Node.js CLI tools
 │   ├── composio/          # Composio integration layer (quick start + toolkit mapping)
 │   ├── integrations/      # API integration guides per tool
-│   └── REGISTRY.md        # Tool index with capabilities
+│   └── REGISTRY.md        # Tool index, organized by job
+├── ROUTING.md             # Skill boundary contract — read before writing a description
+├── SKILL-TEMPLATE.md      # Skill anatomy and the description formula
+├── VERSIONS.md            # Per-skill versions + changelog
 ├── CONTRIBUTING.md
 ├── LICENSE
 └── README.md
@@ -63,6 +71,14 @@ Bump the repo release version in the same PR that ships the change (2.7.0 and 2.
 
 ## Agent Skills Specification
 
+**Before writing or editing a skill, read two files:**
+
+1. **[ROUTING.md](ROUTING.md)** — the skill boundary contract. The `description` field is the *only* routing signal an agent has, so collisions are decided by phrase overlap. Every known collision has a prescribed reciprocal boundary sentence that must appear in both skills' descriptions.
+2. **[SKILL-TEMPLATE.md](SKILL-TEMPLATE.md)** — skill anatomy and the three-part description formula.
+
+Every skill must have an `## Output Format` section naming a concrete deliverable. This is what makes a skill produce work product rather than a conversation, and it is what serves the agency use case.
+
+
 Skills follow the [Agent Skills spec](https://agentskills.io/specification.md).
 
 ### Required Frontmatter
@@ -90,8 +106,8 @@ description: What this skill does and when to use it. Include trigger phrases.
 - No consecutive hyphens (`--`)
 - Must match parent directory name exactly
 
-**Valid**: `cro`, `emails`, `ab-testing`
-**Invalid**: `Page-CRO`, `-page`, `page--cro`
+**Valid**: `site-cro`, `product-pages`, `bundles-and-aov`
+**Invalid**: `Product-Pages`, `-pages`, `product--pages`
 
 ### Optional Skill Directories
 
@@ -140,7 +156,7 @@ The `description` is critical for skill discovery. Include:
 3. Related skills for scope boundaries
 
 ```yaml
-description: When the user wants to optimize conversions on any marketing page. Use when the user says "CRO," "conversion rate optimization," "this page isn't converting." For signup flows, see signup.
+description: When the user wants to improve a product detail page. Also use when the user mentions 'PDP,' 'product page,' 'product description,' 'my product page isn\'t converting.' For homepage, navigation, and sitewide friction, see site-cro. For claims, disclosures, and channel policy, see claims-and-compliance.
 ```
 
 ## Claude Code Plugin
@@ -148,8 +164,8 @@ description: When the user wants to optimize conversions on any marketing page. 
 This repo also serves as a plugin marketplace. The manifest at `.claude-plugin/marketplace.json` lists all skills for installation via:
 
 ```bash
-/plugin marketplace add coreyhaines31/marketingskills
-/plugin install marketing-skills
+/plugin marketplace add brycehamrick/ecom-marketingskills
+/plugin install ecommerce-marketing-skills
 ```
 
 See [Claude Code plugins documentation](https://code.claude.com/docs/en/plugins.md) for details.
@@ -193,28 +209,34 @@ This repository includes a tools registry for agent-compatible marketing tools.
 tools/
 ├── REGISTRY.md              # Index of all tools with capabilities
 └── integrations/            # Detailed integration guides
-    ├── ga4.md
-    ├── stripe.md
-    ├── rewardful.md
+    ├── klaviyo.md
+    ├── shopify.md
+    ├── amazon-sp-api.md
     └── ...
 ```
 
 ### When to Use Tools
 
 Skills reference relevant tools for implementation. For example:
-- `referrals` skill → rewardful, tolt, dub-co, mention-me guides
-- `analytics` skill → ga4, mixpanel, segment guides
-- `emails` skill → customer-io, mailchimp, resend guides
-- `ads` skill → google-ads, meta-ads, linkedin-ads guides
+- `catalog-and-feeds` → google-merchant-center, meta-catalog guides
+- `lifecycle-flows` → klaviyo, postscript, attentive, omnisend guides
+- `amazon-growth` → amazon-sp-api, amazon-ads guides
+- `reviews-and-reputation` → okendo, yotpo, judgeme, loox guides
+- `subscriptions-and-replenishment` → recharge, skio, stay-ai guides
+- `post-purchase-experience` → loop-returns, aftership, gorgias guides
+- `profitability-and-incrementality` → triple-whale, northbeam, polar-analytics guides
+- `wholesale-and-retail` → faire guide
 
-For tools without native MCP servers (HubSpot, Salesforce, Meta Ads, LinkedIn Ads, Google Sheets, Slack, Notion), Composio provides MCP access via a single server. See `tools/integrations/composio.md` for setup and `tools/composio/marketing-tools.md` for the full toolkit mapping.
+`tools/REGISTRY.md` is organized **by job**, not alphabetically — find the job, pick the tool, read the guide.
+
+For tools without native MCP servers, Composio provides MCP access via a single server. See `tools/integrations/composio.md` for setup and `tools/composio/marketing-tools.md` for the full toolkit mapping.
 
 ## Checking for Updates
 
 When using any skill from this repository:
 
 1. **Once per session**, on first skill use, check for updates:
-   - Fetch `VERSIONS.md` from GitHub: https://raw.githubusercontent.com/coreyhaines31/marketingskills/main/VERSIONS.md
+   - Fetch `VERSIONS.md` from GitHub: https://raw.githubusercontent.com/brycehamrick/ecom-marketingskills/main/VERSIONS.md
    - Compare versions against local skill files
 
 2. **Only prompt if meaningful**:
@@ -225,11 +247,11 @@ When using any skill from this repository:
    ```
    ---
    Skills update available: X marketing skills have updates.
-   Say "update skills" to update automatically, or run `git pull` in your marketingskills folder.
+   Say "update skills" to update automatically, or run `git pull` in your ecom-marketingskills folder.
    ```
 
 4. **If user says "update skills"**:
-   - Run `git pull` in the marketingskills directory
+   - Run `git pull` in the ecom-marketingskills directory
    - Confirm what was updated
 
 ## Skill Categories
@@ -244,12 +266,12 @@ These patterns are **Claude Code only** and must not be added to `SKILL.md` file
 
 Claude Code supports embedding shell commands in SKILL.md using `` !`command` `` syntax. When the skill is invoked, Claude Code runs the command and injects the output inline — the model sees the result, not the instruction.
 
-**Most useful application: auto-inject the product marketing context file**
+**Most useful application: auto-inject the brand context file**
 
-Instead of every skill telling the agent "go check if `.agents/product-marketing.md` exists and read it," you can inject it automatically:
+Instead of every skill telling the agent "go check if `.agents/brand-context.md` exists and read it," you can inject it automatically:
 
 ```markdown
-Product context: !`cat .agents/product-marketing.md 2>/dev/null || echo "No product context file found — ask the user about their product before proceeding."`
+Brand context: !`cat .agents/brand-context.md 2>/dev/null || echo "No brand context file found — run the brand-context skill before proceeding."`
 ```
 
 Place this at the top of a skill's body (after frontmatter) to make context available immediately without any file-reading step.

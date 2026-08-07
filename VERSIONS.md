@@ -1,60 +1,87 @@
-# Marketing Skills Versions
+# Skill Versions
 
 Current versions of all skills. Agents can compare against local versions to check for updates.
 
 | Skill | Version | Last Updated |
 |-------|---------|--------------|
-| ab-testing | 2.0.0 | 2026-05-05 |
-| ad-creative | 2.8.0 | 2026-07-14 |
-| ai-seo | 2.2.0 | 2026-07-09 |
-| analytics | 2.0.1 | 2026-07-22 |
-| aso | 2.0.0 | 2026-05-05 |
-| attribution | 1.1.0 | 2026-07-23 |
-| churn-prevention | 2.0.0 | 2026-05-05 |
-| co-marketing | 2.0.0 | 2026-05-05 |
-| cold-email | 2.0.0 | 2026-05-05 |
-| community-marketing | 2.0.0 | 2026-05-05 |
-| competitor-profiling | 2.0.0 | 2026-05-05 |
-| competitors | 2.0.1 | 2026-07-09 |
-| content-strategy | 2.0.0 | 2026-05-05 |
-| copy-editing | 2.0.0 | 2026-05-05 |
-| copywriting | 2.0.1 | 2026-06-16 |
-| cro | 2.0.0 | 2026-05-05 |
-| customer-research | 2.0.1 | 2026-07-10 |
-| directory-submissions | 2.0.0 | 2026-05-05 |
-| emails | 2.0.0 | 2026-05-05 |
-| free-tools | 2.0.0 | 2026-05-05 |
-| image | 2.0.1 | 2026-05-18 |
-| influencer-marketing | 1.0.0 | 2026-07-15 |
-| launch | 2.0.1 | 2026-06-16 |
-| lead-magnets | 2.0.0 | 2026-05-05 |
-| marketing-council | 1.0.0 | 2026-07-06 |
-| marketing-ideas | 2.0.0 | 2026-05-05 |
-| marketing-loops | 1.2.0 | 2026-07-10 |
-| marketing-plan | 1.1.0 | 2026-05-29 |
-| marketing-psychology | 2.0.0 | 2026-05-05 |
-| offers | 1.0.0 | 2026-06-16 |
-| onboarding | 2.0.0 | 2026-05-05 |
-| ads | 2.2.0 | 2026-07-05 |
-| paywalls | 2.0.0 | 2026-05-05 |
-| popups | 2.0.0 | 2026-05-05 |
-| pricing | 2.1.0 | 2026-07-27 |
-| product-marketing | 2.1.0 | 2026-07-16 |
-| programmatic-seo | 2.0.0 | 2026-05-05 |
-| prospecting | 1.1.0 | 2026-07-13 |
-| public-relations | 1.0.0 | 2026-06-10 |
-| referrals | 2.0.0 | 2026-05-05 |
-| revops | 2.0.0 | 2026-05-05 |
-| sales-enablement | 2.0.1 | 2026-06-16 |
-| schema | 2.0.0 | 2026-05-05 |
-| seo-audit | 2.0.0 | 2026-05-05 |
-| signup | 2.0.0 | 2026-05-05 |
-| site-architecture | 2.0.0 | 2026-05-05 |
-| sms | 1.0.0 | 2026-05-21 |
-| social | 2.2.0 | 2026-07-09 |
-| video | 2.1.0 | 2026-07-14 |
+| ad-creative | 1.0.0 | 2026-08-07 |
+| ai-search-visibility | 1.0.0 | 2026-08-07 |
+| amazon-growth | 1.0.0 | 2026-08-07 |
+| bfcm-and-peak-season | 1.0.0 | 2026-08-07 |
+| brand-context | 1.0.0 | 2026-08-07 |
+| bundles-and-aov | 1.0.0 | 2026-08-07 |
+| cart-and-checkout | 1.0.0 | 2026-08-07 |
+| catalog-and-feeds | 1.0.0 | 2026-08-07 |
+| category-intel | 1.0.0 | 2026-08-07 |
+| claims-and-compliance | 1.0.0 | 2026-08-07 |
+| client-reporting | 1.0.0 | 2026-08-07 |
+| collection-merchandising | 1.0.0 | 2026-08-07 |
+| creators-and-affiliates | 1.0.0 | 2026-08-07 |
+| customer-research | 1.0.0 | 2026-08-07 |
+| earned-media | 1.0.0 | 2026-08-07 |
+| ecommerce-seo | 1.0.0 | 2026-08-07 |
+| email-sms-campaigns | 1.0.0 | 2026-08-07 |
+| experimentation | 1.0.0 | 2026-08-07 |
+| google-ads | 1.0.0 | 2026-08-07 |
+| growth-audit | 1.0.0 | 2026-08-07 |
+| growth-plan | 1.0.0 | 2026-08-07 |
+| international-expansion | 1.0.0 | 2026-08-07 |
+| lifecycle-flows | 1.0.0 | 2026-08-07 |
+| list-growth | 1.0.0 | 2026-08-07 |
+| marketplace-ads | 1.0.0 | 2026-08-07 |
+| marketplace-listings | 1.0.0 | 2026-08-07 |
+| measurement-and-analytics | 1.0.0 | 2026-08-07 |
+| organic-social | 1.0.0 | 2026-08-07 |
+| paid-social | 1.0.0 | 2026-08-07 |
+| post-purchase-experience | 1.0.0 | 2026-08-07 |
+| pricing-strategy | 1.0.0 | 2026-08-07 |
+| product-launch | 1.0.0 | 2026-08-07 |
+| product-pages | 1.0.0 | 2026-08-07 |
+| profitability-and-incrementality | 1.0.0 | 2026-08-07 |
+| promotions-and-discounting | 1.0.0 | 2026-08-07 |
+| retention-and-loyalty | 1.0.0 | 2026-08-07 |
+| reviews-and-reputation | 1.0.0 | 2026-08-07 |
+| site-cro | 1.0.0 | 2026-08-07 |
+| subscriptions-and-replenishment | 1.0.0 | 2026-08-07 |
+| wholesale-and-retail | 1.0.0 | 2026-08-07 |
+
+---
 
 ## Recent Changes
+
+### 1.0.0 (2026-08-07)
+
+**Complete rebuild for ecommerce.** This repo was forked from [coreyhaines31/marketingskills](https://github.com/coreyhaines31/marketingskills), a B2B SaaS marketing skill set. All 49 upstream skills were removed and 40 ecommerce skills were authored from scratch. No skill names, structures, or instructions were carried over.
+
+**Why:** the upstream taxonomy assumes a software product — `signup`, `onboarding`, `paywalls`, `revops`, `cold-email`, `prospecting`, `free-tools`, `directory-submissions`. It has no place for the jobs that define ecommerce marketing: product detail pages, collection merchandising, product feeds, marketplace listings, subscriptions, post-purchase, wholesale, and peak season.
+
+**Scope:** the skill set serves four operators at depth — DTC brands on Shopify, marketplace sellers, wholesale and omnichannel brands, and the agencies that serve them.
+
+**New in this release:**
+
+- **Foundation & Research (5)** — `brand-context` (writes `.agents/brand-context.md`, read first by every other skill), `customer-research`, `category-intel`, `growth-audit` (a diagnostic router that scores every surface and hands findings to the owning skill), `claims-and-compliance` (FTC endorsement guides, DSHEA and structure/function claims, substantiation, Meta and Google ad policy, TCPA and CTIA SMS consent, CAN-SPAM, Green Guides, marketplace restricted language)
+- **Product & Merchandising (4)** — `product-pages`, `collection-merchandising`, `catalog-and-feeds`, `product-launch`
+- **Offer & Economics (4)** — `pricing-strategy`, `promotions-and-discounting`, `bundles-and-aov`, `bfcm-and-peak-season`
+- **Paid Acquisition (5)** — `paid-social`, `google-ads`, `marketplace-ads`, `ad-creative`, `creators-and-affiliates`
+- **Organic Discovery (4)** — `ecommerce-seo`, `ai-search-visibility`, `organic-social`, `earned-media`
+- **Marketplace & Channel (4)** — `amazon-growth`, `marketplace-listings`, `wholesale-and-retail`, `international-expansion`
+- **Conversion (5)** — `site-cro`, `cart-and-checkout`, `post-purchase-experience`, `reviews-and-reputation`, `experimentation`
+- **Lifecycle & Retention (5)** — `lifecycle-flows`, `email-sms-campaigns`, `list-growth`, `subscriptions-and-replenishment`, `retention-and-loyalty`
+- **Measurement & Planning (4)** — `measurement-and-analytics`, `profitability-and-incrementality`, `growth-plan`, `client-reporting`
+
+**Repo changes:**
+
+- **`ROUTING.md`** (new) — the skill boundary contract. The `description` field is the only routing signal an agent has, so every known collision (product-pages vs site-cro, ad-creative vs paid-social, lifecycle-flows vs email-sms-campaigns, and eight more) carries a prescribed reciprocal boundary sentence documented here, plus a 35-prompt routing fixture.
+- **`SKILL-TEMPLATE.md`** (new) — skill anatomy and the three-part description formula. Every skill now requires an `## Output Format` section naming a concrete deliverable.
+- **Tools layer rebuilt** — 28 B2B-only integrations removed (Apollo, ZoomInfo, Clay, Clearbit, Hunter, Snov, Lemlist, Instantly, Outreach, Close, Salesforce, HubSpot, Crossbeam, Introw, G2, Gong, RB2B, GitHub, Pendo, Demio, Livestorm, Calendly, SavvyCal, Firehose, Rewardful, Tolt, PartnerStack, Paddle) along with 21 corresponding CLIs. 36 ecommerce integrations added: Recharge, Skio, Stay AI, Gorgias, Yotpo, Okendo, Judge.me, Stamped, Loox, Loop Returns, Redo, AfterShip, Amazon SP-API, Amazon Ads, Walmart Marketplace, Etsy, TikTok Shop, Faire, Google Merchant Center, Meta Catalog, Triple Whale, Northbeam, Polar Analytics, Elevar, Smile.io, LoyaltyLion, Rebuy, Searchspring, WooCommerce, BigCommerce, Omnisend, Sendlane, Pinterest Ads, Snapchat Ads, Instacart Ads, Criteo.
+- **`tools/REGISTRY.md`** reorganized **by job** rather than alphabetically, with an agent recommendation per job.
+- **Rebranded** to `brycehamrick/ecom-marketingskills`. Plugin renamed to `ecommerce-marketing-skills`. Version reset to 1.0.0.
+- **Context file renamed** from `.agents/product-marketing.md` to `.agents/brand-context.md`.
+- `sync-skills.js` skill-count regex updated to match the new plugin description.
+
+---
+
+## Pre-Fork History (upstream marketingskills)
 
 ### 2.10.0 (2026-07-22)
 
